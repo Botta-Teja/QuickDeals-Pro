@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickDeals Pro - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+
+<body>
+    <div class="login-container">
+        <!-- Sidebar with branding -->
+        <div class="login-sidebar">
+            <img src="image(quick deals).png" alt="QuickDeals Logo">
+            <h1>Welcome to QuickDeals Pro</h1>
+            <p>Buy and sell anything in your city. Join millions of users trading thousands of products every day.</p>
+        </div>
+
+        <!-- Main login content -->
+        <div class="login-main">
+            <div class="login-logo">
+                <img src="image1(qd).jpg" alt="QuickDeals Logo">
+            </div>
+
+            <!-- User type selection -->
+            <div class="user-type-selection" id="userTypeSelection">
+                <h2>Continue as</h2>
+                <div class="user-type-buttons">
+                    <button class="user-type-btn" id="customerBtn">
+                        <i class="fas fa-user"></i>
+                        Customer
+                    </button>
+                    <button class="user-type-btn" id="sellerBtn">
+                        <i class="fas fa-store"></i>
+                        Seller
+                    </button>
+                </div>
+            </div>
+
+            <!-- Customer Login Form -->
+            <div class="auth-form" id="customerLoginForm">
+                <h2>Customer Login</h2>
+                <form id="customerLogin" action="./customer_login.php" method="POST" autocomplete="off">
+                    <div class="form-group">
+                        <label for="customerEmail">Email</label>
+                        <input type="email" name="email" id="customerEmail" class="form-control" placeholder="Enter your email" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPassword">Password</label>
+                        <input type="password" name="password" id="customerPassword" class="form-control" placeholder="Enter your password" required minlength="4" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    
+                </form>
+                <div class="auth-toggle">
+                    Don't have an account? <a id="showCustomerSignup">Sign up</a>
+                </div>
+            </div>
+
+            <!-- Customer Signup Form -->
+            <div class="auth-form" id="customerSignupForm">
+                <h2>Create Customer Account</h2>
+                <form id="customerSignup" action="./customer_signup.php" method="POST">
+                    <div class="form-group">
+                        <label for="customerSignupName">Full Name</label>
+                        <input type="text" name="name" id="customerSignupName" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerSignupEmail">Email</label>
+                        <input type="email" name="email" id="customerSignupEmail" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerSignupPhone">Phone Number</label>
+                        <input type="tel" name="phone" id="customerSignupPhone" class="form-control" placeholder="Enter your phone number" required maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerSignupPassword">Password</label>
+                        <input type="password" name="password" id="customerSignupPassword" class="form-control" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerSignupConfirm">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="customerSignupConfirm" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    
+                </form>
+                <div class="auth-toggle">
+                    Already have an account? <a id="showCustomerLogin">Sign in</a>
+                </div>
+            </div>
+
+            <!-- Seller Login Form -->
+            <div class="auth-form" id="sellerLoginForm">
+                <h2>Seller Login</h2>
+                <form id="sellerLogin" action="./seller_login.php" method="POST" autocomplete="off">
+                    <div class="form-group">
+                        <label for="sellerEmail">Email</label>
+                        <input type="email" name="email" id="sellerEmail" class="form-control" placeholder="Enter your email" required autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="sellerPassword">Password</label>
+                        <input type="password" name="password" id="sellerPassword" class="form-control" placeholder="Enter your password" required minlength="4" autocomplete="off">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    
+                </form>
+                <div class="auth-toggle">
+                    Don't have an account? <a id="showSellerSignup">Sign up</a>
+                </div>
+            </div>
+
+            <!-- Seller Signup Form -->
+            <div class="auth-form" id="sellerSignupForm">
+                <h2>Create Seller Account</h2>
+                <form id="sellerSignup" action="./seller_signup.php" method="POST">
+                    <div class="form-group">
+                        <label for="sellerSignupName">Business Name</label>
+                        <input type="text" name="business_name" id="sellerSignupName" class="form-control" placeholder="Enter your business name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellerSignupEmail">Email</label>
+                        <input type="email" name="email" id="sellerSignupEmail" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellerSignupPhone">Phone Number</label>
+                        <input type="tel" name="phone" id="sellerSignupPhone" class="form-control" placeholder="Enter your phone number" required maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="sellerSignupAddress">Business Address</label>
+                        <input type="text" name="address" id="sellerSignupAddress" class="form-control" placeholder="Enter your business address" required>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="sellerSignupPassword">Password</label>
+                        <input type="password" name="password" id="sellerSignupPassword" class="form-control" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sellerSignupConfirm">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="sellerSignupConfirm" class="form-control" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    
+                </form>
+                <div class="auth-toggle">
+                    Already have an account? <a id="showSellerLogin">Sign in</a>
+                </div>
+            </div>
+
+            <script>
+                // DOM Elements
+                const customerBtn = document.getElementById('customerBtn');
+                const sellerBtn = document.getElementById('sellerBtn');
+                const userTypeSelection = document.getElementById('userTypeSelection');
+            
+                const customerLoginForm = document.getElementById('customerLoginForm');
+                const customerSignupForm = document.getElementById('customerSignupForm');
+                const sellerLoginForm = document.getElementById('sellerLoginForm');
+                const sellerSignupForm = document.getElementById('sellerSignupForm');
+            
+                const showCustomerSignup = document.getElementById('showCustomerSignup');
+                const showCustomerLogin = document.getElementById('showCustomerLogin');
+                const showSellerSignup = document.getElementById('showSellerSignup');
+                const showSellerLogin = document.getElementById('showSellerLogin');
+            
+                // Toggle forms
+                customerBtn.addEventListener('click', () => {
+                    userTypeSelection.style.display = 'none';
+                    customerLoginForm.classList.add('active');
+                });
+            
+                sellerBtn.addEventListener('click', () => {
+                    userTypeSelection.style.display = 'none';
+                    sellerLoginForm.classList.add('active');
+                });
+            
+                showCustomerSignup.addEventListener('click', () => {
+                    customerLoginForm.classList.remove('active');
+                    customerSignupForm.classList.add('active');
+                });
+            
+                showCustomerLogin.addEventListener('click', () => {
+                    customerSignupForm.classList.remove('active');
+                    customerLoginForm.classList.add('active');
+                });
+            
+                showSellerSignup.addEventListener('click', () => {
+                    sellerLoginForm.classList.remove('active');
+                    sellerSignupForm.classList.add('active');
+                });
+            
+                showSellerLogin.addEventListener('click', () => {
+                    sellerSignupForm.classList.remove('active');
+                    sellerLoginForm.classList.add('active');
+                });
+            
+                // ✅ Customer Signup Validation
+                document.getElementById('customerSignup').addEventListener('submit', function (e) {
+                    const password = document.getElementById('customerSignupPassword').value;
+                    const confirm = document.getElementById('customerSignupConfirm').value;
+            
+                    if (password !== confirm) {
+                        e.preventDefault();
+                        alert('Passwords do not match!');
+                    }
+                });
+            
+                // ✅ Seller Signup Validation
+                document.getElementById('sellerSignup').addEventListener('submit', function (e) {
+                    const password = document.getElementById('sellerSignupPassword').value;
+                    const confirm = document.getElementById('sellerSignupConfirm').value;
+            
+                    if (password !== confirm) {
+                        e.preventDefault();
+                        alert('Passwords do not match!');
+                    }
+                });
+            
+                // ✅ Customer Login Validation
+                document.getElementById('customerLogin').addEventListener('submit', function (e) {
+                    const email = document.getElementById('customerEmail').value.trim();
+                    const password = document.getElementById('customerPassword').value.trim();
+            
+                    if (!email || !password) {
+                        e.preventDefault();
+                        alert('Please fill in all fields');
+                    }
+                });
+            
+                // ✅ Seller Login Validation
+                document.getElementById('sellerLogin').addEventListener('submit', function (e) {
+                    const email = document.getElementById('sellerEmail').value.trim();
+                    const password = document.getElementById('sellerPassword').value.trim();
+            
+                    if (!email || !password) {
+                        e.preventDefault();
+                        alert('Please fill in all fields');
+                    }
+                });
+            </script>            
+</body>
+</html>
